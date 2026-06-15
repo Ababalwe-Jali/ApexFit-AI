@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ApexFIT AI — The premium fitness intelligence platform. Track, optimize, and elevate your performance.">
+<meta name="theme-color" content="#0D0D0D">
+<title>ApexFIT AI — Fitness Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/style.css">
+
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor" id="cursor">
+    <div class="cursor__dot"></div>
+    <div class="cursor__outline"></div>
+    </div>
+    
+    <!-- Page Overlay -->
+    <div class="page-overlay" id="pageOverlay"></div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+    <div class="scroll-progress__fill" id="scrollProgress"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+    <a href="#" class="nav__logo" onclick="navigateTo('home')">
+        <div class="nav__logo-icon"></div>
+        ApexFIT AI
+    </a>
+    <ul class="nav__links">
+        <li><a href="#" onclick="navigateTo('home')" data-page="home">Home</a></li>
+        <li><a href="#" onclick="navigateTo('about')" data-page="about">About</a></li>
+        <li><a href="#" onclick="navigateTo('services')" data-page="services">Services</a></li>
+        <li><a href="#" onclick="navigateTo('features')" data-page="features">Features</a></li>
+        <li><a href="#" onclick="navigateTo('portfolio')" data-page="portfolio">Portfolio</a></li>
+        <li><a href="#" onclick="navigateTo('testimonials')" data-page="testimonials">Reviews</a></li>
+        <li><a href="#" onclick="navigateTo('blog')" data-page="blog">Insights</a></li>
+        <li><a href="#" onclick="navigateTo('contact')" data-page="contact">Contact</a></li>
+    </ul>
+    <a href="#" class="nav__cta" onclick="navigateTo('contact')">Get Started For Free</a>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="navigateTo('home');closeMobileMenu()">Home</a>
+    <a href="#" onclick="navigateTo('about');closeMobileMenu()">About</a>
+    <a href="#" onclick="navigateTo('services');closeMobileMenu()">Services</a>
+    <a href="#" onclick="navigateTo('features');closeMobileMenu()">Features</a>
+    <a href="#" onclick="navigateTo('portfolio');closeMobileMenu()">Portfolio</a>
+    <a href="#" onclick="navigateTo('testimonials');closeMobileMenu()">Reviews</a>
+    <a href="#" onclick="navigateTo('blog');closeMobileMenu()">Insights</a>
+    <a href="#" onclick="navigateTo('contact');closeMobileMenu()">Contact</a>
+    </div>
+    
+    <!-- Page Indicator -->
+    <div class="page-indicator" id="pageIndicator">
+    <div class="page-indicator__dot active" onclick="navigateTo('home')"></div>
+    <div class="page-indicator__dot" onclick="navigateTo('about')"></div>
+    <div class="page-indicator__dot" onclick="navigateTo('services')"></div>
+    <div class="page-indicator__dot" onclick="navigateTo('features')"></div>
+    <div class="page-indicator__dot" onclick="navigateTo('portfolio')"></div>
+    <div class="page-indicator__dot" onclick="navigateTo('testimonials')"></div>
+    <div class="page-indicator__dot" onclick="navigateTo('blog')"></div>
+    <div class="page-indicator__dot" onclick="navigateTo('contact')"></div>
+    </div>
+    
+    <!-- ============================================================
+        HOME PAGE
+    ============================================================ -->
+    <div id="home" class="active">
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__grid"></div>
+        <div class="hero__orb hero__orb-1"></div>
+        <div class="hero__orb hero__orb-2"></div>
+    
+        <div class="hero__content">
+        <div class="hero__eyebrow reveal">
+            <div class="hero__eyebrow-dot"></div>
+            Rated 4.9/5 by 5300 + Customers Worldwide
+        </div>
+        <h1 class="hero__title reveal" data-delay="100">
+            Train smarter.<br>
+            Recover <span class="accent">faster.</span><br>
+            Perform better.
+        </h1>
+        <p class="hero__subtitle reveal" data-delay="200">
+            The intelligent fitness platform that learns your body, adapts your plan, and pushes you toward peak performance — every single day.
+        </p>
+        <div class="hero__actions reveal" data-delay="300">
+            <a href="#" class="btn-primary" onclick="navigateTo('contact')">
+            Download the App
+            <span class="btn-arrow">→</span>
+            </a>
+            <a href="#" class="btn-secondary" onclick="navigateTo('features')">
+            Explore features
+            </a>
+        </div>
+        <div class="hero__stats reveal" data-delay="400">
+            <div>
+            <div class="hero__stat-value">
+                <span class="counter" data-target="2.4">0</span><span class="unit">M+</span>
+            </div>
+            <div class="hero__stat-label">Active athletes</div>
+            </div>
+            <div>
+            <div class="hero__stat-value">
+                <span class="counter" data-target="98">0</span><span class="unit">%</span>
+            </div>
+            <div class="hero__stat-label">Goal achievement rate</div>
+            </div>
+            <div>
+            <div class="hero__stat-value">
+                <span class="counter" data-target="4.9">0</span><span class="unit">★</span>
+            </div>
+            <div class="hero__stat-label">Average rating</div>
+            </div>
+            <div>
+            <div class="hero__stat-value">
+                <span>48</span><span class="unit">h</span>
+            </div>
+            <div class="hero__stat-label">Avg setup time</div>
+            </div>
+        </div>
+        </div>
+    
+        <!-- Dashboard mockup -->
+        <div class="hero__visual">
+        <div class="hero__visual-inner"></div>
+        </div>
+        <div class="hero__dashboard reveal" data-delay="500">
+        <div class="dashboard__header">
+            <div class="dashboard__title">Today's Performance</div>
+            <div class="dashboard__live">LIVE</div>
+        </div>
+        <div class="dashboard__metric" id="hrCounter">147</div>
+        <div class="dashboard__metric-label">BPM — Heart Rate</div>
+        <div class="dashboard__chart">
+            <div class="chart-bar" style="height:45%"></div>
+            <div class="chart-bar" style="height:62%"></div>
+            <div class="chart-bar" style="height:78%"></div>
+            <div class="chart-bar" style="height:85%"></div>
+            <div class="chart-bar active" style="height:92%"></div>
+            <div class="chart-bar" style="height:88%"></div>
+            <div class="chart-bar" style="height:76%"></div>
+            <div class="chart-bar" style="height:70%"></div>
+            <div class="chart-bar" style="height:82%"></div>
+            <div class="chart-bar" style="height:90%"></div>
+            <div class="chart-bar active" style="height:95%"></div>
+            <div class="chart-bar" style="height:87%"></div>
+        </div>
+        <div class="dashboard__ring-row">
+            <div class="ring-item">
+            <div class="ring-label">Calories</div>
+            <div class="ring-value">834<span> kcal</span></div>
+            </div>
+            <div class="ring-item">
+            <div class="ring-label">Zone 3</div>
+            <div class="ring-value">42<span> min</span></div>
+            </div>
+            <div class="ring-item">
+            <div class="ring-label">Recovery</div>
+            <div class="ring-value">87<span>%</span></div>
+            </div>
+        </div>
+        </div>
+    
+        <div class="scroll-hint">
+        <div class="scroll-hint__line"></div>
+        Scroll
+        </div>
+    </section>
+    
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track" id="marqueeTrack">
+        <span class="marquee-item">AI-Powered Training</span>
+        <span class="marquee-item">Real-Time Analytics</span>
+        <span class="marquee-item">Recovery Intelligence</span>
+        <span class="marquee-item">Personalized Coaching</span>
+        <span class="marquee-item">Performance Tracking</span>
+        <span class="marquee-item">Sleep Optimization</span>
+        <span class="marquee-item">Nutrition Guidance</span>
+        <span class="marquee-item">Wearable Sync</span>
+        <span class="marquee-item">AI-Powered Training</span>
+        <span class="marquee-item">Real-Time Analytics</span>
+        <span class="marquee-item">Recovery Intelligence</span>
+        <span class="marquee-item">Personalized Coaching</span>
+        <span class="marquee-item">Performance Tracking</span>
+        <span class="marquee-item">Sleep Optimization</span>
+        <span class="marquee-item">Nutrition Guidance</span>
+        <span class="marquee-item">Wearable Sync</span>
+        </div>
+    </div>
+    
+    <!-- Features Grid -->
+    <section class="features-section">
+        <div class="features-header">
+        <div class="section-label reveal">Why ApexFIT AI</div>
+        <h2 class="reveal" data-delay="100">Everything your body needs to know</h2>
+        <p class="reveal" data-delay="200">From advanced biometrics to adaptive workout plans, ApexFIT AI brings together the intelligence your training demands.</p>
+        </div>
+        <div class="features-grid">
+        <div class="feature-card feature-card--large reveal" data-delay="100">
+            <div class="feature-icon">🧠</div>
+            <h3>Adaptive AI Coach</h3>
+            <p>Our proprietary algorithm analyzes 40+ biometric data points in real time, continuously adjusting your training intensity, volume, and recovery windows for optimal adaptation.</p>
+            <span class="feature-tag">AI-powered</span>
+        </div>
+        <div class="feature-card reveal" data-delay="200">
+            <div class="feature-icon">📊</div>
+            <h3>Live Biometrics</h3>
+            <p>HRV, VO2 max, lactate threshold — visualized in real time across any device.</p>
+            <span class="feature-tag">Real-time</span>
+        </div>
+        <div class="feature-card reveal" data-delay="100">
+            <div class="feature-icon">🔋</div>
+            <h3>Recovery Score</h3>
+            <p>Know exactly when your body is ready to push hard and when to hold back.</p>
+            <span class="feature-tag">Daily score</span>
+        </div>
+        <div class="feature-card reveal" data-delay="200">
+            <div class="feature-icon">🍎</div>
+            <h3>Nutrition Engine</h3>
+            <p>Macro targets and meal timing adapted to your training load, not generic tables.</p>
+            <span class="feature-tag">Personalized</span>
+        </div>
+        <div class="feature-card reveal" data-delay="300">
+            <div class="feature-icon">🌙</div>
+            <h3>Sleep Intelligence</h3>
+            <p>Deep sleep quality mapped against your performance — and adjusted tomorrow's plan accordingly.</p>
+            <span class="feature-tag">Smart adapt</span>
+        </div>
+        </div>
+    </section>
+    
+    <!-- Split Section -->
+    <div class="split-section">
+        <div class="split-left">
+        <div class="section-label reveal" style="color:#D9FF00">Built different</div>
+        <h2 class="reveal" data-delay="100">Not another fitness app. A performance partner.</h2>
+        <p class="reveal" data-delay="200">ApexFIT AI was founded by elite coaches and sports scientists who believed technology should eliminate guesswork — not add more noise.</p>
+        <ul class="split-list light reveal" data-delay="300">
+            <li>Trained on 50M+ elite athlete data points</li>
+            <li>Certified by NSCA and ACSM sports science</li>
+            <li>Used by Olympic-level performance coaches</li>
+            <li>Continuously updated with latest research</li>
+        </ul>
+        </div>
+        <div class="split-right">
+        <div class="section-label reveal">The numbers</div>
+        <h2 class="reveal" data-delay="100">Proven performance gains in 8 weeks.</h2>
+        <p class="reveal" data-delay="200">Our clinical study across 1,200 users showed measurable performance improvements across every fitness level.</p>
+        <ul class="split-list reveal" data-delay="300">
+            <li>23% average VO2 max improvement</li>
+            <li>31% reduction in injury risk</li>
+            <li>18% faster recovery between sessions</li>
+            <li>41% increase in training consistency</li>
+        </ul>
+        <a href="#" class="btn-primary" style="margin-top:32px" onclick="navigateTo('about')">
+            Read the study <span class="btn-arrow">→</span>
+        </a>
+        </div>
+    </div>
+    
+    <!-- Stats -->
+    <div style="padding: 100px 48px;">
+        <div class="stats-section">
+        <div class="stat-block reveal">
+            <div class="stat-number"><span class="counter" data-target="2.4">0</span><span class="suffix">M</span></div>
+            <div class="stat-desc">Athletes actively training on Novawell worldwide</div>
+        </div>
+        <div class="stat-block reveal" data-delay="100">
+            <div class="stat-number"><span class="counter" data-target="98">0</span><span class="suffix">%</span></div>
+            <div class="stat-desc">User goal achievement rate within first 90 days</div>
+        </div>
+        <div class="stat-block reveal" data-delay="200">
+            <div class="stat-number"><span class="counter" data-target="140">0</span><span class="suffix">+</span></div>
+            <div class="stat-desc">Countries with active Novawell communities</div>
+        </div>
+        <div class="stat-block reveal" data-delay="300">
+            <div class="stat-number"><span class="counter" data-target="50">0</span><span class="suffix">M</span></div>
+            <div class="stat-desc">Workouts completed across our global network</div>
+        </div>
+        </div>
+    </div>
+    
+    <!-- Testimonials Strip -->
+    <div class="testimonials-strip">
+        <div class="testimonials-strip__header">
+        <h2 class="reveal">Trusted by athletes who<br>demand results.</h2>
+        <a href="#" class="btn-ghost reveal" onclick="navigateTo('testimonials')">All reviews <span class="btn-arrow">→</span></a>
+        </div>
+        <div class="testimonials-carousel">
+        <div class="testimonial-card reveal">
+            <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testimonial-text">"ApexFIT AI is the only platform that actually adjusts my plan when I'm traveling or stressed. My marathon PR dropped by 14 minutes in one season."</p>
+            <div class="testimonial-author">
+            <div class="testimonial-avatar">SJ</div>
+            <div>
+                <div class="testimonial-name">Sarah J.</div>
+                <div class="testimonial-role">Marathon Runner, Boston qualifier</div>
+            </div>
+            </div>
+        </div>
+        <div class="testimonial-card reveal" data-delay="100">
+            <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testimonial-text">"As a strength coach, I now recommend ApexFIT AI to all my clients. The AI adapts faster than any human coach could manually — and the science is solid."</p>
+            <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: linear-gradient(135deg,#0055ff,#0033aa)">MK</div>
+            <div>
+                <div class="testimonial-name">Marcus K.</div>
+                <div class="testimonial-role">CSCS Strength Coach, NYC</div>
+            </div>
+            </div>
+        </div>
+        <div class="testimonial-card reveal" data-delay="200">
+            <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testimonial-text">"Lost 18kg and hit a new deadlift personal best in the same year. The recovery scoring feature alone is worth the subscription."</p>
+            <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: linear-gradient(135deg,#ff5500,#aa3300)">LP</div>
+            <div>
+                <div class="testimonial-name">Lena P.</div>
+                <div class="testimonial-role">Powerlifter & Entrepreneur</div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <!-- CTA Banner -->
+    <div class="cta-banner reveal">
+        <h2>Ready to <em>unlock</em> your peak performance?</h2>
+        <div class="cta-actions">
+        <a href="#" class="btn-primary" onclick="navigateTo('contact')">Start free — 14 days <span class="btn-arrow">→</span></a>
+        <a href="#" class="btn-secondary" onclick="navigateTo('services')">View plans</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__grid">
+        <div class="footer__brand">
+            <div class="nav__logo">
+            <div class="nav__logo-icon"></div>
+            ApexFIT AI
+            </div>
+            <p>The intelligent performance platform for serious athletes. Train smarter, recover faster, perform better — every day.</p>
+        </div>
+        <div class="footer__col">
+            <h4>Platform</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('features')">Features</a></li>
+            <li><a href="#" onclick="navigateTo('services')">Pricing</a></li>
+            <li><a href="#" onclick="navigateTo('portfolio')">Case Studies</a></li>
+            <li><a href="#">API Docs</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('about')">About</a></li>
+            <li><a href="#" onclick="navigateTo('blog')">Insights</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Connect</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Partnerships</a></li>
+            <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="footer__bottom">
+        <div class="footer__copy">© 2025 ApexFIT AI Inc. All rights reserved.</div>
+
+        <div class="footer__credit" style="font-size: 13px; color: rgba(191, 191, 191, 0.6);">
+            Proudly designed and developed by 
+            <a href="https://www.linkedin.com/in/ababalwe-jali-178032354/" target="_blank" rel="noopener" style="text-decoration: underline;">
+                Ababalwe Jali
+            </a>
+        </div>
+
+        <div class="footer__socials">
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="Instagram">◈</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">▶</a>
+        </div>
+        </div>
+    </footer>
+    </div>
+    
+    <!-- ============================================================
+        ABOUT PAGE
+    ============================================================ -->
+    <div id="about">
+    <div class="page-hero">
+        <div class="section-label reveal">Our story</div>
+        <h1 class="reveal" data-delay="100">Built by <em>athletes,</em><br>for athletes.</h1>
+        <p class="intro reveal" data-delay="200">ApexFIT AI began when three sports scientists and two Olympic coaches asked a simple question: why do elite athletes have access to tools that everyday athletes never get?</p>
+    </div>
+    
+    <div class="about-split">
+        <div class="about-content reveal-left">
+        <h2>The mission that drives everything</h2>
+        <p>We believe every person who trains deserves the same quality of coaching intelligence available to the world's best athletes. Not approximations. Not generic templates. Real, adaptive, scientifically validated guidance — personalized to your specific biology.</p>
+        <p>Founded in 2019 by Ababalwe Jali, Jonathan Millz, and Mellisa Hudson, ApexFIT AI has grown from a research prototype into the platform trusted by 2.4 million athletes across 140 countries.</p>
+        <p>Our team combines deep sports science expertise with world-class machine learning engineering — united by a single obsession: making you better, every single day.</p>
+        <div class="about-values">
+            <div class="value-item">
+            <div class="value-icon">🔬</div>
+            <div class="value-title">Science-first</div>
+            <div class="value-desc">Every feature grounded in peer-reviewed research</div>
+            </div>
+            <div class="value-item">
+            <div class="value-icon">⚡</div>
+            <div class="value-title">Radical adaptivity</div>
+            <div class="value-desc">Your plan changes every day, as you change</div>
+            </div>
+            <div class="value-item">
+            <div class="value-icon">🌍</div>
+            <div class="value-title">Universal access</div>
+            <div class="value-desc">Elite-level coaching for every budget</div>
+            </div>
+            <div class="value-item">
+            <div class="value-icon">🛡️</div>
+            <div class="value-title">Privacy by default</div>
+            <div class="value-desc">Your biometric data is yours. Always.</div>
+            </div>
+        </div>
+        </div>
+    
+        <div class="reveal-right" style="padding-left: 60px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="background:#1E1E1E; border-radius:20px; border:1px solid rgba(255,255,255,0.06); padding:40px; margin-bottom:24px;">
+            <div class="section-label" style="margin-bottom:16px">Timeline</div>
+            <div style="display:flex;flex-direction:column;gap:24px;">
+            <div style="display:flex;gap:20px;align-items:flex-start;">
+                <div style="background:#D9FF00;color:#000;font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;padding:4px 12px;border-radius:4px;white-space:nowrap;flex-shrink:0;">2019</div>
+                <div style="font-family:'Manrope',sans-serif;font-size:15px;color:rgba(255,255,255,0.65);line-height:1.5;">Founded in South Africa. First research prototype tested with 30 elite cyclists.</div>
+            </div>
+            <div style="display:flex;gap:20px;align-items:flex-start;">
+                <div style="background:rgba(217,255,0,0.1);color:#D9FF00;font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;padding:4px 12px;border-radius:4px;white-space:nowrap;flex-shrink:0;">2021</div>
+                <div style="font-family:'Manrope',sans-serif;font-size:15px;color:rgba(255,255,255,0.65);line-height:1.5;">Series A — R4.3M. Public launch. 90,000 users in first 30 days.</div>
+            </div>
+            <div style="display:flex;gap:20px;align-items:flex-start;">
+                <div style="background:rgba(217,255,0,0.1);color:#D9FF00;font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;padding:4px 12px;border-radius:4px;white-space:nowrap;flex-shrink:0;">2023</div>
+                <div style="font-family:'Manrope',sans-serif;font-size:15px;color:rgba(255,255,255,0.65);line-height:1.5;">Series B — R6.2M. AI Coach v2.0 launched. Olympic Games partnership announced.</div>
+            </div>
+            <div style="display:flex;gap:20px;align-items:flex-start;">
+                <div style="background:rgba(217,255,0,0.1);color:#D9FF00;font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;padding:4px 12px;border-radius:4px;white-space:nowrap;flex-shrink:0;">2025</div>
+                <div style="font-family:'Manrope',sans-serif;font-size:15px;color:rgba(255,255,255,0.65);line-height:1.5;">2.4M active athletes. AI Coach v3 with real-time biometric adaptation.</div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="team-section">
+        <div class="section-label reveal">The people behind it</div>
+        <h2 class="reveal" data-delay="100">Leadership team</h2>
+        <div class="team-grid">
+        <div class="team-card reveal">
+            <div class="team-avatar" style="background:linear-gradient(135deg,#D9FF00,#88cc00)">AR</div>
+            <div class="team-name">Ababalwe Jali</div>
+            <div class="team-role">Co-founder & CEO</div>
+        </div>
+        <div class="team-card reveal" data-delay="100">
+            <div class="team-avatar" style="background:linear-gradient(135deg,#0055ff,#003399)">JO</div>
+            <div class="team-name">Jonathan Millz</div>
+            <div class="team-role">Co-founder & CTO</div>
+        </div>
+        <div class="team-card reveal" data-delay="200">
+            <div class="team-avatar" style="background:linear-gradient(135deg,#ff5500,#aa2200)">CO</div>
+            <div class="team-name">Mellisa Hudson</div>
+            <div class="team-role">Co-founder & CSO</div>
+        </div>
+        <div class="team-card reveal" data-delay="300">
+            <div class="team-avatar" style="background:linear-gradient(135deg,#9900ff,#5500aa)">MV</div>
+            <div class="team-name">Elizabeth Clock</div>
+            <div class="team-role">VP of Product</div>
+        </div>
+        </div>
+    </div>
+    
+    <!-- CTA Banner -->
+    <div class="cta-banner reveal" style="margin-top:80px;">
+        <h2>Ready to <em>unlock</em> your peak performance?</h2>
+        <div class="cta-actions">
+        <a href="#" class="btn-primary" onclick="navigateTo('contact')">Start free — 14 days <span class="btn-arrow">→</span></a>
+        <a href="#" class="btn-secondary" onclick="navigateTo('services')">View plans</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__grid">
+        <div class="footer__brand">
+            <div class="nav__logo">
+            <div class="nav__logo-icon"></div>
+                ApexFIT AI
+            </div>
+            <p>The intelligent performance platform for serious athletes. Train smarter, recover faster, perform better — every day.</p>
+        </div>
+        <div class="footer__col">
+            <h4>Platform</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('features')">Features</a></li>
+            <li><a href="#" onclick="navigateTo('services')">Pricing</a></li>
+            <li><a href="#" onclick="navigateTo('portfolio')">Case Studies</a></li>
+            <li><a href="#">API Docs</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('about')">About</a></li>
+            <li><a href="#" onclick="navigateTo('blog')">Insights</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Connect</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Partnerships</a></li>
+            <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="footer__bottom">
+        <div class="footer__copy">© 2025 ApexFIT AI Inc. All rights reserved.</div>
+
+        <div class="footer__credit" style="font-size: 13px; color: rgba(191, 191, 191, 0.6);">
+            Proudly designed and developed by 
+            <a href="https://www.linkedin.com/in/ababalwe-jali-178032354/" target="_blank" rel="noopener" style="text-decoration: underline;">
+                Ababalwe Jali
+            </a>
+        </div>
+
+        <div class="footer__socials">
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="Instagram">◈</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">▶</a>
+        </div>
+        </div>
+    </footer>
+    </div>
+    
+    <!-- ============================================================
+        SERVICES PAGE
+    ============================================================ -->
+    <div id="services">
+    <div class="page-hero">
+        <div class="section-label reveal">Pricing & plans</div>
+        <h1 class="reveal" data-delay="100">Simple pricing.<br><em>Powerful results.</em></h1>
+        <p class="intro reveal" data-delay="200">No contracts. No hidden fees. Cancel anytime. Choose the plan that matches where you are — and where you want to be.</p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card reveal">
+        <div class="service-number">01</div>
+        <div class="service-icon">🌱</div>
+        <div class="service-title">Starter</div>
+        <div class="service-desc">Perfect for athletes just beginning their data-driven journey. Core tracking, 3 AI workouts/week, and basic analytics.</div>
+        <div class="progress-bar-container"><div class="progress-label"><span>Features included</span><span>30%</span></div><div class="progress-bar"><div class="progress-fill" data-width="0.3"></div></div></div>
+        <div class="service-price">$0 <span>/ forever free</span></div>
+        <a href="#" class="btn-secondary" style="margin-top:24px;display:inline-flex">Get started</a>
+        </div>
+        <div class="service-card reveal" data-delay="100" style="border-color:rgba(217,255,0,0.3);box-shadow:0 0 0 1px rgba(217,255,0,0.15);">
+        <div style="position:absolute;top:24px;right:24px;background:#D9FF00;color:#000;font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;padding:4px 12px;border-radius:80px;">MOST POPULAR</div>
+        <div class="service-number">02</div>
+        <div class="service-icon">⚡</div>
+        <div class="service-title">Pro Athlete</div>
+        <div class="service-desc">Full AI coaching engine, unlimited workouts, real-time HRV and recovery scoring, nutrition planner, and sleep analysis.</div>
+        <div class="progress-bar-container"><div class="progress-label"><span>Features included</span><span>75%</span></div><div class="progress-bar"><div class="progress-fill" data-width="0.75"></div></div></div>
+        <div class="service-price">$29 <span>/ month</span></div>
+        <a href="#" class="btn-primary" style="margin-top:24px;display:inline-flex" onclick="navigateTo('contact')">Start free trial <span class="btn-arrow">→</span></a>
+        </div>
+        <div class="service-card reveal" data-delay="200">
+        <div class="service-number">03</div>
+        <div class="service-icon">🏆</div>
+        <div class="service-title">Elite</div>
+        <div class="service-desc">Everything in Pro plus 1-on-1 human coach integration, weekly video reviews, priority support, and API access for custom integrations.</div>
+        <div class="progress-bar-container"><div class="progress-label"><span>Features included</span><span>100%</span></div><div class="progress-bar"><div class="progress-fill" data-width="1.0"></div></div></div>
+        <div class="service-price">$79 <span>/ month</span></div>
+        <a href="#" class="btn-secondary" style="margin-top:24px;display:inline-flex" onclick="navigateTo('contact')">Contact sales</a>
+        </div>
+    </div>
+    
+    <!-- Feature comparison table -->
+    <div style="max-width:1200px;margin:0 auto;padding:0 48px 100px;">
+        <div class="section-label reveal">Detailed comparison</div>
+        <h2 class="reveal" data-delay="100" style="font-family:'Lexend',sans-serif;font-size:clamp(28px,3vw,40px);font-weight:400;color:#FFFFFF;margin-bottom:40px;letter-spacing:-0.02em;">What's included</h2>
+        <div class="reveal" style="background:#1E1E1E;border:1px solid rgba(255,255,255,0.06);border-radius:20px;overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;">
+            <thead>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+                <th style="padding:20px 32px;text-align:left;font-family:'Lexend',sans-serif;font-size:16px;font-weight:400;color:rgba(255,255,255,0.5);">Feature</th>
+                <th style="padding:20px 24px;text-align:center;font-family:'Lexend',sans-serif;font-size:16px;font-weight:400;color:rgba(255,255,255,0.5);">Starter</th>
+                <th style="padding:20px 24px;text-align:center;font-family:'Lexend',sans-serif;font-size:16px;font-weight:400;color:#D9FF00;">Pro</th>
+                <th style="padding:20px 24px;text-align:center;font-family:'Lexend',sans-serif;font-size:16px;font-weight:400;color:rgba(255,255,255,0.5);">Elite</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                <td style="padding:16px 32px;font-family:'Manrope',sans-serif;font-size:15px;color:rgba(255,255,255,0.7);">AI-generated workouts</td>
+                <td style="padding:16px 24px;text-align:center;color:rgba(255,255,255,0.4);font-family:'Manrope',sans-serif;font-size:14px;">3 / week</td>
+                <td style="padding:16px 24px;text-align:center;color:#D9FF00;font-size:16px;">✓</td>
+                <td style="padding:16px 24px;text-align:center;color:#D9FF00;font-size:16px;">✓</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                <td style="padding:16px 32px;font-family:'Manrope',sans-serif;font-size:15px;color:rgba(255,255,255,0.7);">Real-time HRV monitoring</td>
+                <td style="padding:16px 24px;text-align:center;color:rgba(255,255,255,0.2);font-size:16px;">—</td>
+                <td style="padding:16px 24px;text-align:center;color:#D9FF00;font-size:16px;">✓</td>
+                <td style="padding:16px 24px;text-align:center;color:#D9FF00;font-size:16px;">✓</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                <td style="padding:16px 32px;font-family:'Manrope',sans-serif;font-size:15px;color:rgba(255,255,255,0.7);">Nutrition engine</td>
+                <td style="padding:16px 24px;text-align:center;color:rgba(255,255,255,0.2);font-size:16px;">—</td>
+                <td style="padding:16px 24px;text-align:center;color:#D9FF00;font-size:16px;">✓</td>
+                <td style="padding:16px 24px;text-align:center;color:#D9FF00;font-size:16px;">✓</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                <td style="padding:16px 32px;font-family:'Manrope',sans-serif;font-size:15px;color:rgba(255,255,255,0.7);">Human coach integration</td>
+                <td style="padding:16px 24px;text-align:center;color:rgba(255,255,255,0.2);font-size:16px;">—</td>
+                <td style="padding:16px 24px;text-align:center;color:rgba(255,255,255,0.2);font-size:16px;">—</td>
+                <td style="padding:16px 24px;text-align:center;color:#D9FF00;font-size:16px;">✓</td>
+            </tr>
+            <tr>
+                <td style="padding:16px 32px;font-family:'Manrope',sans-serif;font-size:15px;color:rgba(255,255,255,0.7);">API access</td>
+                <td style="padding:16px 24px;text-align:center;color:rgba(255,255,255,0.2);font-size:16px;">—</td>
+                <td style="padding:16px 24px;text-align:center;color:rgba(255,255,255,0.2);font-size:16px;">—</td>
+                <td style="padding:16px 24px;text-align:center;color:#D9FF00;font-size:16px;">✓</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+    
+    <!-- CTA Banner -->
+    <div class="cta-banner reveal" style="margin-top:80px;">
+        <h2>Ready to <em>unlock</em> your peak performance?</h2>
+        <div class="cta-actions">
+        <a href="#" class="btn-primary" onclick="navigateTo('contact')">Start free — 14 days <span class="btn-arrow">→</span></a>
+        <a href="#" class="btn-secondary" onclick="navigateTo('services')">View plans</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__grid">
+        <div class="footer__brand">
+            <div class="nav__logo">
+            <div class="nav__logo-icon"></div>
+            ApexFIT AI
+            </div>
+            <p>The intelligent performance platform for serious athletes. Train smarter, recover faster, perform better — every day.</p>
+        </div>
+        <div class="footer__col">
+            <h4>Platform</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('features')">Features</a></li>
+            <li><a href="#" onclick="navigateTo('services')">Pricing</a></li>
+            <li><a href="#" onclick="navigateTo('portfolio')">Case Studies</a></li>
+            <li><a href="#">API Docs</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('about')">About</a></li>
+            <li><a href="#" onclick="navigateTo('blog')">Insights</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Connect</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Partnerships</a></li>
+            <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="footer__bottom">
+        <div class="footer__copy">© 2025 ApexFIT AI Inc. All rights reserved.</div>
+
+        <div class="footer__credit" style="font-size: 13px; color: rgba(191, 191, 191, 0.6);">
+            Proudly designed and developed by 
+            <a href="https://www.linkedin.com/in/ababalwe-jali-178032354/" target="_blank" rel="noopener" style="text-decoration: underline;">
+                Ababalwe Jali
+            </a>
+        </div>
+
+        <div class="footer__socials">
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="Instagram">◈</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">▶</a>
+        </div>
+        </div>
+    </footer>
+    </div>
+    
+    <!-- ============================================================
+        FEATURES PAGE
+    ============================================================ -->
+    <div id="features">
+    <div class="page-hero">
+        <div class="section-label reveal">Full capabilities</div>
+        <h1 class="reveal" data-delay="100">Every feature you need.<br><em>Nothing you don't.</em></h1>
+        <p class="intro reveal" data-delay="200">ApexFIT AI is built with precision. Each feature exists because it improves performance — not because it fills a feature list.</p>
+    </div>
+    <div class="features-full-grid">
+        <div class="feature-full-cell reveal"><div class="feature-full-icon">🤖</div><div class="feature-full-title">AI Adaptive Coaching</div><div class="feature-full-desc">Dynamic plan adjustment based on 40+ biometric signals updated daily</div></div>
+        <div class="feature-full-cell reveal" data-delay="50"><div class="feature-full-icon">💓</div><div class="feature-full-title">HRV Monitoring</div><div class="feature-full-desc">Heart rate variability tracking synced with sleep and training load</div></div>
+        <div class="feature-full-cell reveal" data-delay="100"><div class="feature-full-icon">📈</div><div class="feature-full-title">VO₂ Max Estimator</div><div class="feature-full-desc">Lab-grade oxygen uptake estimation from everyday workouts</div></div>
+        <div class="feature-full-cell reveal" data-delay="0"><div class="feature-full-icon">🌙</div><div class="feature-full-title">Sleep Analysis</div><div class="feature-full-desc">Deep, REM, and light sleep breakdown correlated with training readiness</div></div>
+        <div class="feature-full-cell reveal" data-delay="50"><div class="feature-full-icon">🍽️</div><div class="feature-full-title">Nutrition Engine</div><div class="feature-full-desc">Daily macro targets that shift with your training intensity and goals</div></div>
+        <div class="feature-full-cell reveal" data-delay="100"><div class="feature-full-icon">⚡</div><div class="feature-full-title">Recovery Score</div><div class="feature-full-desc">Single daily readiness number synthesized from all your biometrics</div></div>
+        <div class="feature-full-cell reveal" data-delay="0"><div class="feature-full-icon">🔗</div><div class="feature-full-title">Wearable Sync</div><div class="feature-full-desc">Native integrations with Garmin, Polar, Apple Watch, Whoop, and Oura</div></div>
+        <div class="feature-full-cell reveal" data-delay="50"><div class="feature-full-icon">📊</div><div class="feature-full-title">Training Analytics</div><div class="feature-full-desc">Zone distribution, load progression, and performance trend charts</div></div>
+        <div class="feature-full-cell reveal" data-delay="100"><div class="feature-full-icon">🎯</div><div class="feature-full-title">Goal Mapping</div><div class="feature-full-desc">Event-based periodization from sprint races to ultras to powerlifting meets</div></div>
+        <div class="feature-full-cell reveal" data-delay="0"><div class="feature-full-icon">👥</div><div class="feature-full-title">Team Mode</div><div class="feature-full-desc">Coaches can manage up to 50 athletes with aggregated dashboards</div></div>
+        <div class="feature-full-cell reveal" data-delay="50"><div class="feature-full-icon">🔐</div><div class="feature-full-title">Private by Design</div><div class="feature-full-desc">Zero data selling, end-to-end encryption, GDPR and HIPAA compliant</div></div>
+        <div class="feature-full-cell reveal" data-delay="100"><div class="feature-full-icon">📱</div><div class="feature-full-title">Cross-Platform</div><div class="feature-full-desc">iOS, Android, and web — fully synced in real time across all devices</div></div>
+    </div>
+    
+    <div class="split-section">
+        <div class="split-left">
+        <div class="section-label reveal" style="color:#D9FF00">Under the hood</div>
+        <h2 class="reveal" data-delay="100">AI that actually understands athletic performance</h2>
+        <p class="reveal" data-delay="200">Our model was trained on 50 million athlete data points spanning 8 years of longitudinal performance data — across recreational runners, Olympic sprinters, elite powerlifters, and everyone in between.</p>
+        <p class="reveal" data-delay="300" style="font-family:'Manrope',sans-serif;font-size:17px;line-height:1.8;color:rgba(255,255,255,0.55);">It doesn't just recognize patterns. It understands the physiology behind them — and adapts your training accordingly.</p>
+        </div>
+        <div class="split-right">
+        <div class="section-label reveal">Accuracy</div>
+        <h2 class="reveal" data-delay="100">Benchmark performance</h2>
+        <div class="reveal" data-delay="200">
+            <div class="progress-bar-container"><div class="progress-label"><span style="color: #000;">Recovery prediction accuracy</span><span style="color: #000;">94%</span></div><div class="progress-bar"><div class="progress-fill" data-width="0.94"></div></div></div>
+            <div class="progress-bar-container"><div class="progress-label"><span style="color: #000;">Injury risk detection</span><span style="color: #000;">88%</span></div><div class="progress-bar"><div class="progress-fill" data-width="0.88"></div></div></div>
+            <div class="progress-bar-container"><div class="progress-label"><span style="color: #000;">Goal achievement rate</span><span style="color: #000;">98%</span></div><div class="progress-bar"><div class="progress-fill" data-width="0.98"></div></div></div>
+            <div class="progress-bar-container"><div class="progress-label"><span style="color: #000;">User satisfaction</span><span style="color: #000;">96%</span></div><div class="progress-bar"><div class="progress-fill" data-width="0.96"></div></div></div>
+        </div>
+        </div>
+    </div>
+    
+    <!-- CTA Banner -->
+    <div class="cta-banner reveal" style="margin-top:80px;">
+        <h2>Ready to <em>unlock</em> your peak performance?</h2>
+        <div class="cta-actions">
+        <a href="#" class="btn-primary" onclick="navigateTo('contact')">Start free — 14 days <span class="btn-arrow">→</span></a>
+        <a href="#" class="btn-secondary" onclick="navigateTo('services')">View plans</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__grid">
+        <div class="footer__brand">
+            <div class="nav__logo">
+            <div class="nav__logo-icon"></div>
+                ApexFIT AI
+            </div>
+            <p>The intelligent performance platform for serious athletes. Train smarter, recover faster, perform better — every day.</p>
+        </div>
+        <div class="footer__col">
+            <h4>Platform</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('features')">Features</a></li>
+            <li><a href="#" onclick="navigateTo('services')">Pricing</a></li>
+            <li><a href="#" onclick="navigateTo('portfolio')">Case Studies</a></li>
+            <li><a href="#">API Docs</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('about')">About</a></li>
+            <li><a href="#" onclick="navigateTo('blog')">Insights</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Connect</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Partnerships</a></li>
+            <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="footer__bottom">
+        <div class="footer__copy">© 2025 ApexFIT AI Inc. All rights reserved.</div>
+
+        <div class="footer__credit" style="font-size: 13px; color: rgba(191, 191, 191, 0.6);">
+            Proudly designed and developed by 
+            <a href="https://www.linkedin.com/in/ababalwe-jali-178032354/" target="_blank" rel="noopener" style="text-decoration: underline;">
+                Ababalwe Jali
+            </a>
+        </div>
+
+        <div class="footer__socials">
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="Instagram">◈</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">▶</a>
+        </div>
+        </div>
+    </footer>
+    </div>
+    
+    <!-- ============================================================
+        PORTFOLIO PAGE
+    ============================================================ -->
+    <div id="portfolio">
+    <div class="page-hero">
+        <div class="section-label reveal">Case studies</div>
+        <h1 class="reveal" data-delay="100">Results that<br><em>speak for themselves.</em></h1>
+        <p class="intro reveal" data-delay="200">From Olympic preparation to everyday athletes, here's how Novawell has transformed performance across disciplines.</p>
+    </div>
+    <div class="portfolio-filter reveal">
+        <button class="filter-btn active" onclick="filterPortfolio('all', this)">All</button>
+        <button class="filter-btn" onclick="filterPortfolio('endurance', this)">Endurance</button>
+        <button class="filter-btn" onclick="filterPortfolio('strength', this)">Strength</button>
+        <button class="filter-btn" onclick="filterPortfolio('team', this)">Team Sport</button>
+        <button class="filter-btn" onclick="filterPortfolio('rehab', this)">Recovery</button>
+    </div>
+    <div class="portfolio-grid">
+        <div class="portfolio-card portfolio-card--large reveal" data-category="endurance">
+        <div class="portfolio-card__image">
+                <img src="../Assests/Tokyo Marathon.jpg" alt="Tokyo Olympics Marathon Prep">
+            </div>
+
+        <div class="portfolio-card__overlay">
+            <span class="portfolio-tag">Endurance</span>
+            <h3>Tokyo Olympics Marathon Prep</h3>
+            <p>How 3 marathon athletes used ApexFIT AI to peak on race day</p>
+        </div>
+        </div>
+        <div class="portfolio-card reveal" data-delay="100" data-category="strength">
+        <div class="portfolio-card__image">
+                <img src="../Assests/Powerlifting.jpg" alt="Tokyo Olympics Marathon Prep">
+            </div>
+
+        <div class="portfolio-card__overlay">
+            <span class="portfolio-tag">Strength</span>
+            <h3>Elite Powerlifting Team</h3>
+            <p>23% strength gain across 6 athletes in 12 weeks</p>
+        </div>
+        </div>
+        <div class="portfolio-card reveal" data-category="team">
+        <div class="portfolio-card__image">
+                <img src="../Assests/Soccer Injury.jpg" alt="Tokyo Olympics Marathon Prep">
+            </div>
+
+        <div class="portfolio-card__overlay">
+            <span class="portfolio-tag">Team Sport</span>
+            <h3>Pro Soccer Injury Prevention</h3>
+            <p>Reduced soft tissue injuries by 41% across a full season</p>
+        </div>
+        </div>
+        <div class="portfolio-card reveal" data-delay="100" data-category="endurance">
+        <div class="portfolio-card__image">
+                <img src="../Assests/Tour Cyclist.jpg" alt="Tokyo Olympics Marathon Prep">
+            </div>
+
+        <div class="portfolio-card__overlay">
+            <span class="portfolio-tag">Endurance</span>
+            <h3>Tour Cyclist Recovery Protocol</h3>
+            <p>Stage recovery optimization for a 21-day grand tour</p>
+        </div>
+        </div>
+        <div class="portfolio-card portfolio-card--large reveal" data-delay="200" data-category="rehab">
+        <div class="portfolio-card__image">
+                <img src="../Assests/Performance.jpg" alt="Tokyo Olympics Marathon Prep">
+            </div>
+
+        <div class="portfolio-card__overlay">
+            <span class="portfolio-tag">Recovery</span>
+            <h3>Post-Surgery Return to Performance</h3>
+            <p>How our adaptive AI safely guided 200+ athletes back from injury</p>
+        </div>
+        </div>
+    </div>
+    
+    <!-- CTA Banner -->
+    <div class="cta-banner reveal" style="margin-top:80px;">
+        <h2>Ready to <em>unlock</em> your peak performance?</h2>
+        <div class="cta-actions">
+        <a href="#" class="btn-primary" onclick="navigateTo('contact')">Start free — 14 days <span class="btn-arrow">→</span></a>
+        <a href="#" class="btn-secondary" onclick="navigateTo('services')">View plans</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__grid">
+        <div class="footer__brand">
+            <div class="nav__logo">
+            <div class="nav__logo-icon"></div>
+            ApexFIT AI
+            </div>
+            <p>The intelligent performance platform for serious athletes. Train smarter, recover faster, perform better — every day.</p>
+        </div>
+        <div class="footer__col">
+            <h4>Platform</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('features')">Features</a></li>
+            <li><a href="#" onclick="navigateTo('services')">Pricing</a></li>
+            <li><a href="#" onclick="navigateTo('portfolio')">Case Studies</a></li>
+            <li><a href="#">API Docs</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('about')">About</a></li>
+            <li><a href="#" onclick="navigateTo('blog')">Insights</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Connect</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Partnerships</a></li>
+            <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="footer__bottom">
+        <div class="footer__copy">© 2025 ApexFIT AI Inc. All rights reserved.</div>
+
+        <div class="footer__credit" style="font-size: 13px; color: rgba(191, 191, 191, 0.6);">
+            Proudly designed and developed by 
+            <a href="https://www.linkedin.com/in/ababalwe-jali-178032354/" target="_blank" rel="noopener" style="text-decoration: underline;">
+                Ababalwe Jali
+            </a>
+        </div>
+
+        <div class="footer__socials">
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="Instagram">◈</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">▶</a>
+        </div>
+        </div>
+    </footer>
+    </div>
+    
+    <!-- ============================================================
+        TESTIMONIALS PAGE
+    ============================================================ -->
+    <div id="testimonials">
+    <div class="page-hero">
+        <div class="section-label reveal">Community voices</div>
+        <h1 class="reveal" data-delay="100">What athletes<br><em>actually say.</em></h1>
+        <p class="intro reveal" data-delay="200">2.4 million athletes. Thousands of stories. Here's a handful that remind us why we built Novawell.</p>
+    </div>
+    <div class="testimonials-full-grid">
+        <div class="testimonial-full-card reveal">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">"ApexFIT AI didn't just change how I train — it changed how I think about my body. The recovery score has saved me from overtraining more times than I can count."</p>
+        <div class="testimonial-author" style="margin-top:24px">
+            <div class="testimonial-avatar">SJ</div>
+            <div><div class="testimonial-name">Sarah J.</div><div class="testimonial-role">Marathon Runner · Boston qualifier</div></div>
+        </div>
+        </div>
+        <div class="testimonial-full-card reveal" data-delay="100">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">"As a coach, I've tried every platform out there. Nothing comes close to the depth of ApexFIT AI's analytics. My athletes are getting results I couldn't achieve manually."</p>
+        <div class="testimonial-author" style="margin-top:24px">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#0055ff,#003399)">MK</div>
+            <div><div class="testimonial-name">Marcus K.</div><div class="testimonial-role">CSCS Coach · New York</div></div>
+        </div>
+        </div>
+        <div class="testimonial-full-card reveal" data-delay="200">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">"Lost 18kg and hit a deadlift PR in the same year. The nutrition engine is unbelievably accurate. I eat more and perform better — I had no idea that was possible."</p>
+        <div class="testimonial-author" style="margin-top:24px">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#ff5500,#aa2200)">LP</div>
+            <div><div class="testimonial-name">Lena P.</div><div class="testimonial-role">Powerlifter · Munich</div></div>
+        </div>
+        </div>
+        <div class="testimonial-full-card reveal">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">"Returned from ACL surgery using ApexFIT AI's recovery protocol. Back to full speed in 6 months — my surgeon was genuinely surprised."</p>
+        <div class="testimonial-author" style="margin-top:24px">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#9900ff,#5500aa)">TR</div>
+            <div><div class="testimonial-name">Tomás R.</div><div class="testimonial-role">Semi-pro Football · Madrid</div></div>
+        </div>
+        </div>
+        <div class="testimonial-full-card reveal" data-delay="100">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">"I travel 200+ days a year for work. ApexFIT AI is the only app that actually adapts to jet lag, time zones, and whatever hotel gym I'm in."</p>
+        <div class="testimonial-author" style="margin-top:24px">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#00aa55,#005522)">AW</div>
+            <div><div class="testimonial-name">Alex W.</div><div class="testimonial-role">Executive Athlete · Singapore</div></div>
+        </div>
+        </div>
+        <div class="testimonial-full-card reveal" data-delay="200">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">"Qualified for Kona on my third attempt. I credit the training periodization and race-day taper protocol ApexFIT AI built for me entirely."</p>
+        <div class="testimonial-author" style="margin-top:24px">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#ff9900,#cc6600)">CF</div>
+            <div><div class="testimonial-name">Clara F.</div><div class="testimonial-role">Ironman Triathlete · Cape Town</div></div>
+        </div>
+        </div>
+    </div>
+    
+    <!-- CTA Banner -->
+    <div class="cta-banner reveal" style="margin-top:80px;">
+        <h2>Ready to <em>unlock</em> your peak performance?</h2>
+        <div class="cta-actions">
+        <a href="#" class="btn-primary" onclick="navigateTo('contact')">Start free — 14 days <span class="btn-arrow">→</span></a>
+        <a href="#" class="btn-secondary" onclick="navigateTo('services')">View plans</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__grid">
+        <div class="footer__brand">
+            <div class="nav__logo">
+            <div class="nav__logo-icon"></div>
+                ApexFIT AI
+            </div>
+            <p>The intelligent performance platform for serious athletes. Train smarter, recover faster, perform better — every day.</p>
+        </div>
+        <div class="footer__col">
+            <h4>Platform</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('features')">Features</a></li>
+            <li><a href="#" onclick="navigateTo('services')">Pricing</a></li>
+            <li><a href="#" onclick="navigateTo('portfolio')">Case Studies</a></li>
+            <li><a href="#">API Docs</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('about')">About</a></li>
+            <li><a href="#" onclick="navigateTo('blog')">Insights</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Connect</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Partnerships</a></li>
+            <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="footer__bottom">
+        <div class="footer__copy">© 2025 ApexFIT AI Inc. All rights reserved.</div>
+
+        <div class="footer__credit" style="font-size: 13px; color: rgba(191, 191, 191, 0.6);">
+            Proudly designed and developed by 
+            <a href="https://www.linkedin.com/in/ababalwe-jali-178032354/" target="_blank" rel="noopener" style="text-decoration: underline;">
+                Ababalwe Jali
+            </a>
+        </div>
+
+        <div class="footer__socials">
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="Instagram">◈</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">▶</a>
+        </div>
+        </div>
+    </footer>
+    </div>
+    
+    <!-- ============================================================
+        BLOG PAGE
+    ============================================================ -->
+    <div id="blog">
+    <div class="page-hero">
+        <div class="section-label reveal">Knowledge hub</div>
+        <h1 class="reveal" data-delay="100">Insights for<br><em>serious athletes.</em></h1>
+        <p class="intro reveal" data-delay="200">The latest thinking in sports science, training methodology, nutrition, and recovery — written by our team of researchers and coaches.</p>
+    </div>
+    <div class="blog-grid">
+        <div class="blog-featured reveal">
+        <div class="blog-featured__img">
+            <img src="../Assests/HRV.jpg" alt="HRV Science Article">
+        </div>
+
+        <div class="blog-featured__content">
+            <div class="blog-meta">
+            <span class="blog-category">Sports Science</span>
+            <span>·</span>
+            <span>June 12, 2025</span>
+            <span>·</span>
+            <span>8 min read</span>
+            </div>
+            <h2>The HRV Paradox: Why Resting More Sometimes Means Training Less Effectively</h2>
+            <p>New research from our data team reveals a counterintuitive finding: athletes who rest when HRV drops below their baseline by less than 15% actually perform worse at key competitions than those who continue low-intensity training.</p>
+            <a href="#" class="btn-ghost" style="margin-top:24px;display:inline-flex">Read article <span class="btn-arrow">→</span></a>
+        </div>
+        </div>
+        <div class="blog-sidebar">
+        <div class="blog-card reveal">
+            <div class="blog-meta"><span class="blog-category">Nutrition</span><span>·</span><span>5 min</span></div>
+            <h3>Carb Timing Around Zone 5 Intervals: What the Data Shows</h3>
+            <p>Our nutrition engine analyzed 400,000 high-intensity sessions. Here's what actually matters about pre-workout carbs.</p>
+        </div>
+        <div class="blog-card reveal" data-delay="100">
+            <div class="blog-meta"><span class="blog-category">Recovery</span><span>·</span><span>6 min</span></div>
+            <h3>Cold Exposure Protocols: The 4 Variables That Actually Matter</h3>
+            <p>Temperature, duration, timing, and frequency. A data-driven breakdown of what moves the needle on recovery.</p>
+        </div>
+        <div class="blog-card reveal" data-delay="200">
+            <div class="blog-meta"><span class="blog-category">Training</span><span>·</span><span>7 min</span></div>
+            <h3>Why 80/20 Training Works — And When It Doesn't</h3>
+            <p>The polarized model has strong evidence behind it. But our analysis shows it's not optimal for every athlete type.</p>
+        </div>
+        <div class="blog-card reveal" data-delay="300">
+            <div class="blog-meta"><span class="blog-category">Mental Performance</span><span>·</span><span>4 min</span></div>
+            <h3>The Psychological Load Score: Measuring Stress You Can't See</h3>
+            <p>A new metric we're testing that quantifies life stress and integrates it into your training plan.</p>
+        </div>
+        </div>
+    </div>
+    
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__grid">
+        <div class="footer__brand">
+            <div class="nav__logo">
+            <div class="nav__logo-icon"></div>
+            ApexFIT AI
+            </div>
+            <p>The intelligent performance platform for serious athletes. Train smarter, recover faster, perform better — every day.</p>
+        </div>
+        <div class="footer__col">
+            <h4>Platform</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('features')">Features</a></li>
+            <li><a href="#" onclick="navigateTo('services')">Pricing</a></li>
+            <li><a href="#" onclick="navigateTo('portfolio')">Case Studies</a></li>
+            <li><a href="#">API Docs</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('about')">About</a></li>
+            <li><a href="#" onclick="navigateTo('blog')">Insights</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h4>Connect</h4>
+            <ul>
+            <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Partnerships</a></li>
+            <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="footer__bottom">
+        <div class="footer__copy">© 2025 ApexFIT AI Inc. All rights reserved.</div>
+
+        <div class="footer__credit" style="font-size: 13px; color: rgba(191, 191, 191, 0.6);">
+            Proudly designed and developed by 
+            <a href="https://www.linkedin.com/in/ababalwe-jali-178032354/" target="_blank" rel="noopener" style="text-decoration: underline;">
+                Ababalwe Jali
+            </a>
+        </div>
+
+        <div class="footer__socials">
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="Instagram">◈</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">▶</a>
+        </div>
+        </div>
+    </footer>
+    </div>
+    
+    <!-- ============================================================
+        CONTACT PAGE
+    ============================================================ -->
+    <div id="contact">
+    <div class="page-hero">
+        <div class="section-label reveal">Get in touch</div>
+        <h1 class="reveal" data-delay="100">Let's talk<br><em>performance.</em></h1>
+        <p class="intro reveal" data-delay="200">Whether you're a solo athlete, a coach managing a team, or an organization looking for an enterprise solution — we want to hear from you.</p>
+    </div>
+    <div class="contact-layout">
+        <div class="contact-info reveal-left">
+        <h2>We respond within<br>24 hours.</h2>
+        <p>Have a question about features, pricing, or how Novawell works for elite teams? Our sports performance specialists are here to help.</p>
+        <div class="contact-detail">
+            <div class="contact-detail__icon">📧</div>
+            <div>
+            <div class="contact-detail__title">Email</div>
+            <div class="contact-detail__value">hello@apexfit.ai</div>
+            </div>
+        </div>
+        <div class="contact-detail">
+            <div class="contact-detail__icon">📞</div>
+            <div>
+            <div class="contact-detail__title">Phone</div>
+            <div class="contact-detail__value">+27 (060) 320-7047</div>
+            </div>
+        </div>
+        <div class="contact-detail">
+            <div class="contact-detail__icon">📍</div>
+            <div>
+            <div class="contact-detail__title">Head Quarters</div>
+            <div class="contact-detail__value">1099 Paddlefish Str, Gauteng, South Africa, 1449</div>
+            </div>
+        </div>
+        <div class="contact-detail">
+            <div class="contact-detail__icon">🕐</div>
+            <div>
+            <div class="contact-detail__title">Operating Hours</div>
+            <div class="contact-detail__value">Mon–Fri, 09:00am–18:00pm SAST</div>
+            </div>
+        </div>
+        </div>
+        <div class="reveal-right">
+        <div class="contact-form" id="contactForm">
+            <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">First name</label>
+                <input type="text" class="form-input" placeholder="Ababalwe" id="firstName">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Last name</label>
+                <input type="text" class="form-input" placeholder="Jali" id="lastName">
+            </div>
+            </div>
+            <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="mellokuhlejali@gmail.com" id="email">
+            </div>
+            <div class="form-group">
+            <label class="form-label">I am a</label>
+            <select class="form-input" style="cursor:pointer;appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23797979' stroke-width='2' fill='none'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 20px center;">
+                <option value="" style="background:#2F2F2F;">Select your role...</option>
+                <option style="background:#2F2F2F">Individual athlete</option>
+                <option style="background:#2F2F2F">Fitness coach</option>
+                <option style="background:#2F2F2F">Sports organization</option>
+                <option style="background:#2F2F2F">Healthcare professional</option>
+                <option style="background:#2F2F2F">Media / Press</option>
+            </select>
+            </div>
+            <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Tell us about your goals or questions..." rows="5"></textarea>
+            </div>
+            <button class="btn-primary" onclick="submitForm()" style="width:100%;justify-content:center;">
+            Send message <span class="btn-arrow">→</span>
+            </button>
+            <div class="form-success" id="formSuccess">
+            ✓ Your message was sent. We'll be in touch within 24 hours.
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer__grid">
+        <div class="footer__brand">
+            <div class="nav__logo"><div class="nav__logo-icon"></div>ApexFIT AI</div>
+            <p>The intelligent performance platform for serious athletes. Train smarter, recover faster.</p>
+        </div>
+        <div class="footer__col"><h4>Platform</h4><ul><li><a href="#" onclick="navigateTo('features')">Features</a></li><li><a href="#" onclick="navigateTo('services')">Pricing</a></li><li><a href="#" onclick="navigateTo('portfolio')">Case Studies</a></li></ul></div>
+        <div class="footer__col"><h4>Company</h4><ul><li><a href="#" onclick="navigateTo('about')">About</a></li><li><a href="#" onclick="navigateTo('blog')">Insights</a></li><li><a href="#">Careers</a></li></ul></div>
+        <div class="footer__col"><h4>Connect</h4><ul><li><a href="#" onclick="navigateTo('contact')">Contact</a></li><li><a href="#">Community</a></li><li><a href="#">Support</a></li></ul></div>
+        </div>
+        <div class="footer__bottom">
+        <div class="footer__copy">© 2025 ApexFIT AI Inc. All rights reserved. · Privacy · Terms</div>
+
+        <div class="footer__credit" style="font-size: 13px; color: rgba(191, 191, 191, 0.6);">
+            Proudly designed and developed by 
+            <a href="https://www.linkedin.com/in/ababalwe-jali-178032354/" target="_blank" rel="noopener" style="text-decoration: underline;">
+                Ababalwe Jali
+            </a>
+        </div>
+        <div class="footer__socials"><a href="#">𝕏</a><a href="#">◈</a><a href="#">in</a><a href="#">▶</a></div>
+        </div>
+    </footer>
+    </div>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        const cursorDot = cursor?.querySelector('.cursor__dot');
+        const cursorOutline = cursor?.querySelector('.cursor__outline');
+        let mouseX = 0, mouseY = 0;
+        let outlineX = 0, outlineY = 0;
+        
+        document.addEventListener('mousemove', e => {
+        mouseX = e.clientX; mouseY = e.clientY;
+        if (cursorDot) {
+            cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        }
+        });
+        
+        function animateCursor() {
+        outlineX += (mouseX - outlineX) * 0.12;
+        outlineY += (mouseY - outlineY) * 0.12;
+        if (cursorOutline) {
+            cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+        }
+        requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+        
+        document.querySelectorAll('a, button, .feature-card, .team-card, .service-card, .portfolio-card, .blog-card, .blog-featured, .testimonial-card, .testimonial-full-card').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor?.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => cursor?.classList.remove('hovering'));
+        });
+        
+        // =========================================
+        // NAVIGATION SCROLL STATE
+        // =========================================
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+        updateScrollProgress();
+        }, { passive: true });
+        
+        function updateScrollProgress() {
+        const scrolled = window.scrollY;
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = total > 0 ? scrolled / total : 0;
+        const fill = document.getElementById('scrollProgress');
+        if (fill) fill.style.transform = `scaleX(${progress})`;
+        }
+        
+        // =========================================
+        // PAGE NAVIGATION
+        // =========================================
+        const pages = ['home','about','services','features','portfolio','testimonials','blog','contact'];
+        let currentPage = 'home';
+        
+        function navigateTo(pageId) {
+        if (pageId === currentPage) { window.scrollTo({top:0,behavior:'smooth'}); return; }
+        const overlay = document.getElementById('pageOverlay');
+        overlay.classList.remove('leaving');
+        overlay.classList.add('entering');
+        
+        setTimeout(() => {
+            document.getElementById(currentPage).classList.remove('active');
+            document.getElementById(pageId).classList.add('active');
+            currentPage = pageId;
+            window.scrollTo(0, 0);
+            
+            // Update nav active states
+            document.querySelectorAll('.nav__links a').forEach(a => {
+            a.classList.toggle('active', a.dataset.page === pageId);
+            });
+            
+            // Update page indicator
+            const dots = document.querySelectorAll('.page-indicator__dot');
+            const idx = pages.indexOf(pageId);
+            dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+            
+            overlay.classList.remove('entering');
+            overlay.classList.add('leaving');
+            
+            // Re-init reveals on new page
+            setTimeout(() => {
+            initReveals();
+            initCounters();
+            initProgressBars();
+            }, 100);
+            
+            setTimeout(() => overlay.classList.remove('leaving'), 600);
+        }, 450);
+        
+        return false;
+        }
+        
+        // =========================================
+        // HAMBURGER MENU
+        // =========================================
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+        
+        hamburger.addEventListener('click', () => {
+        menuOpen = !menuOpen;
+        mobileMenu.classList.toggle('open', menuOpen);
+        const spans = hamburger.querySelectorAll('span');
+        if (menuOpen) {
+            spans[0].style.transform = 'translateY(7px) rotate(45deg)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+        } else {
+            spans[0].style.transform = '';
+            spans[1].style.opacity = '';
+            spans[2].style.transform = '';
+        }
+        });
+        
+        function closeMobileMenu() {
+        menuOpen = false;
+        mobileMenu.classList.remove('open');
+        const spans = hamburger.querySelectorAll('span');
+        spans[0].style.transform = '';
+        spans[1].style.opacity = '';
+        spans[2].style.transform = '';
+        }
+        
+        // =========================================
+        // INTERSECTION OBSERVER — REVEALS
+        // =========================================
+        function initReveals() {
+        const elements = document.querySelectorAll('#' + currentPage + ' .reveal, #' + currentPage + ' .reveal-left, #' + currentPage + ' .reveal-right, #' + currentPage + ' .reveal-scale');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        
+        elements.forEach(el => {
+            el.classList.remove('visible');
+            observer.observe(el);
+        });
+        }
+        
+        // =========================================
+        // COUNTER ANIMATION
+        // =========================================
+        function animateCounter(el, target, duration = 2000) {
+        const start = performance.now();
+        const isDecimal = String(target).includes('.');
+        const decimals = isDecimal ? String(target).split('.')[1].length : 0;
+        
+        function update(time) {
+            const elapsed = time - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const value = eased * target;
+            el.textContent = isDecimal ? value.toFixed(decimals) : Math.floor(value);
+            if (progress < 1) requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+        }
+        
+        function initCounters() {
+        const counters = document.querySelectorAll('#' + currentPage + ' .counter');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = parseFloat(el.dataset.target);
+                animateCounter(el, target);
+                observer.unobserve(el);
+            }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(c => observer.observe(c));
+        }
+        
+        // =========================================
+        // PROGRESS BARS
+        // =========================================
+        function initProgressBars() {
+        const bars = document.querySelectorAll('#' + currentPage + ' .progress-fill');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const width = parseFloat(bar.dataset.width || 0);
+                setTimeout(() => {
+                bar.style.transform = `scaleX(${width})`;
+                bar.classList.add('animated');
+                }, 200);
+                observer.unobserve(bar);
+            }
+            });
+        }, { threshold: 0.3 });
+        bars.forEach(b => observer.observe(b));
+        }
+        
+        // =========================================
+        // FEATURE CARD MOUSE TRACKING
+        // =========================================
+        document.querySelectorAll('.feature-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            card.style.setProperty('--mx', x + '%');
+            card.style.setProperty('--my', y + '%');
+        });
+        });
+        
+        // =========================================
+        // PORTFOLIO FILTER
+        // =========================================
+        function filterPortfolio(cat, btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        document.querySelectorAll('.portfolio-card').forEach(card => {
+            const cardCat = card.dataset.category;
+            if (cat === 'all' || cardCat === cat) {
+            card.style.opacity = '1';
+            card.style.transform = '';
+            card.style.pointerEvents = '';
+            } else {
+            card.style.opacity = '0.2';
+            card.style.transform = 'scale(0.95)';
+            card.style.pointerEvents = 'none';
+            }
+            card.style.transition = 'opacity 0.4s, transform 0.4s';
+        });
+        }
+        
+        // =========================================
+        // CONTACT FORM
+        // =========================================
+        function submitForm() {
+        const firstName = document.getElementById('firstName')?.value;
+        const email = document.getElementById('email')?.value;
+        if (!firstName || !email) {
+            document.getElementById('email').style.borderColor = '#ff4444';
+            document.getElementById('email').style.boxShadow = '0 0 0 3px rgba(255,68,68,0.1)';
+            setTimeout(() => {
+            document.getElementById('email').style.borderColor = '';
+            document.getElementById('email').style.boxShadow = '';
+            }, 2000);
+            return;
+        }
+        document.getElementById('contactForm').style.opacity = '0.4';
+        document.getElementById('contactForm').style.pointerEvents = 'none';
+        setTimeout(() => {
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+        }, 800);
+        }
+        
+        // =========================================
+        // LIVE HR COUNTER ANIMATION
+        // =========================================
+        function animateHR() {
+        const el = document.getElementById('hrCounter');
+        if (!el) return;
+        const base = 147;
+        const variation = Math.floor(Math.sin(Date.now() / 3000) * 8 + Math.random() * 4 - 2);
+        el.textContent = base + variation;
+        }
+        setInterval(animateHR, 1200);
+        
+        // =========================================
+        // INIT ON LOAD
+        // =========================================
+        document.addEventListener('DOMContentLoaded', () => {
+        // Small delay to let page render
+        setTimeout(() => {
+            initReveals();
+            initCounters();
+            initProgressBars();
+        }, 300);
+        });
+        
+        // Prevent default on all # links
+        document.querySelectorAll('a[href="#"]').forEach(a => {
+        a.addEventListener('click', e => e.preventDefault());
+        });
+    </script>
+
+</body>
+</html>
